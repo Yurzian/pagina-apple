@@ -1,0 +1,358 @@
+.main {
+    width: 100%;
+
+    .buscador {
+        display: none;
+        margin: auto;
+        width: 50%;
+        justify-content: center;
+        
+
+        input {
+            
+            width: 100%;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            font-size: 13px;
+            background-color: rgba(255, 251, 255, 0.755);
+            font-weight: bold;
+            color: black;
+        }
+
+        input:focus {
+            outline: none;
+        }
+    }
+
+    img {
+        width: 100%;
+    }
+
+    .txtIndex {
+        text-align: center;
+        padding-top: 50px;
+        font-size: 50px;
+    }
+
+    .zoom {
+        transition: transform 0.2s ease;
+    }
+    
+    .zoom:hover {
+        transform: scale(1.02);
+      }
+    
+
+    .carrouselFotos {
+        margin-top: 10px;
+    }
+
+    .fotoZoom {
+        transform: scale(1.5);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: sans-serif;
+    }
+
+    .carousel {
+        background: black;
+    }
+
+    .carousel2 {
+        background-color: transparent;
+    }
+
+    .carousel-cell {
+        width: 70%;
+        height: 200px;
+        /* flex-box, center image in cell */
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+
+    .carousel-cell img {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        /* dim unselected */
+        opacity: 0.7;
+        -webkit-transform: scale(0.85);
+        transform: scale(0.85);
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+        transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+    }
+
+    /* brighten selected image */
+    .carousel-cell.is-selected img {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    .carousel-cell a {
+        text-decoration: none;
+    }
+
+    .carousel-cell p {
+        display: block;
+        max-width: 100%;
+        max-height: 100%;
+        /* dim unselected */
+        opacity: 0.7;
+        -webkit-transform: scale(0.85);
+        transform: scale(0.85);
+        -webkit-filter: blur(5px);
+        filter: blur(5px);
+        -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+        transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+    }
+
+    /* brighten selected text */
+    .carousel-cell.is-selected p {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-filter: none;
+        filter: none;
+    }
+
+    @media screen and (min-width: 768px) {
+        .carousel-cell {
+            height: 400px;
+        }
+    }
+
+    @media screen and (min-width: 960px) {
+        .carousel-cell {
+            width: 60%;
+        }
+    }
+
+    /* buttons, no circle */
+    .flickity-prev-next-button {
+        width: 60px;
+        height: 60px;
+        background: transparent;
+        opacity: 0.6;
+    }
+
+    .flickity-prev-next-button:hover {
+        background: transparent;
+        opacity: 1;
+    }
+
+    /* arrow color */
+    .flickity-prev-next-button .arrow {
+        fill: white;
+    }
+
+    .flickity-prev-next-button.no-svg {
+        color: white;
+    }
+
+    /* closer to edge */
+    .flickity-prev-next-button.previous {
+        left: 0;
+    }
+
+    .flickity-prev-next-button.next {
+        right: 0;
+    }
+
+    /* hide disabled button */
+    .flickity-prev-next-button:disabled {
+        display: none;
+    }
+
+    ///////////////////////////////////
+    
+    .especificaciones {
+        max-height: 100%;
+    }
+
+    /* Ponemos un color de fondo y redondeamos las esquinas del track */
+    .especificaciones::-webkit-scrollbar-track {
+        background: #e1e1e1;
+        border-radius: 4px;
+    }
+
+    /* Cambiamos el fondo cuando esté en active o hover */
+    .especificaciones::-webkit-scrollbar-track:hover,
+    .especificaciones::-webkit-scrollbar-track:active {
+    background: #d4d4d4;
+    }
+}
+
+///////////////////////////////////////
+///  PRODUCTO
+
+#caracteristicasTitulo {
+    margin-right: 100px;
+}
+
+
+.caracteristicasEscribir {
+    font-size: 18px;
+    line-height: 33px;
+}
+
+
+//////////////////////////////////////////////////
+/// TIENDA
+
+.contenidoTienda {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.sideBarTienda {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1 1 auto;
+    background-color: rgba(10, 71, 157, 0.247);
+    padding-top: 70px;
+    padding-right: 30px;
+    min-width: 400px;
+    min-height: 100vh;
+
+    .itemTitulo {
+        text-align: left;
+        margin-left: 25px;
+        margin-top: 20px;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .item {
+        margin-left: 25px;
+        margin-bottom: 20px;
+
+        :focus {
+            outline: none;
+        }
+    }
+}
+
+.productos {
+    padding-left: 75px;
+    padding-top: 90px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex: 5 1 auto;
+    color: rgb(147, 3, 3);
+    font-size: 20px;
+    width: 1500px;
+    min-height: 830px;
+    
+    .producto {
+        color:white;
+        text-decoration: none;
+        margin: 50px;
+        text-align: center;
+    }
+    
+    .divProducto {
+        margin: auto;
+        display: flex;
+        height: 200px;
+        width: 350px;
+        border-radius: 15px;
+        justify-content: center;
+    }
+    
+    .fotoProducto {
+        height: 100%;
+        border-radius: 15px;
+    }
+
+}
+
+.btnPaginas {
+    margin-left: 78%;
+}
+
+
+//////////////////////////////////////
+/// CARRITO
+
+.toast {
+    width: 50px;
+}
+
+.productosCarrito {
+    display: flex;
+    align-items: start;
+    flex-flow: row wrap;
+    justify-content: start;
+    font-size: 0px;
+    
+    .producto {
+        display: flex;
+        flex-flow: row wrap;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        justify-content: center;
+        align-items: center;
+        color:white;
+        text-decoration: none;
+        padding-top:20px;
+        padding-right:20px;
+        padding-bottom:20px;
+        margin:20px;
+        text-align: center;
+    }
+    
+    .divProducto {
+        margin: auto;
+        display: flex;
+        flex-flow: column wrap;
+        height: 200px;
+        width: 350px;
+        border-radius: 15px;
+    }
+    
+    .fotoProducto {
+        height: 80%;
+        border-radius: 15px;
+    }
+
+    p {
+        line-height: 40px;
+        height: 100%;
+    }
+
+}
+
+@media all and (max-width:1400px)
+{
+    .productosCarrito {
+        justify-content: center;
+    }
+}
+
+@media all and (max-width:768px)
+{
+    .productosCarrito {
+        .producto {
+            justify-content: center;
+            align-items:center;
+        }
+    }
+}
